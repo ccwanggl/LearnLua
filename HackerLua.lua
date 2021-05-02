@@ -94,3 +94,6 @@ print(a2(64))       --> 100
 -- with lists that may be mismatched in length,.
 -- Unmatched receivers are nil;
 -- unmatched senders are discarded.
+
+x, y, z = 1, 2, 3, 4
+-- Now x = 1, y = 2, z = 3, and 4 is thrown away.
