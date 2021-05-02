@@ -63,3 +63,9 @@ end
 -- Use "100, 1, -1" as the range to count down:
 fredSum = 0
 for j = 100, 1, -1 do fredSum = fredSum + j end
+
+--Another loop construct:
+repeat
+    print('the way of the future')
+    num = num - 1
+until num == 0
