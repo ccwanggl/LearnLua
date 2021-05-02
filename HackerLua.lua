@@ -97,3 +97,18 @@ print(a2(64))       --> 100
 
 x, y, z = 1, 2, 3, 4
 -- Now x = 1, y = 2, z = 3, and 4 is thrown away.
+
+function bar(a, b, c)
+    print(a,b,c)
+    return 4, 8, 15, 16, 23, 42
+end
+
+x, y = bar('zaphod')    --> prints "zaphod nil nil"
+-- Now x = 4, y = 8, values 15...42 are discarded.
+
+-- Functions are first-class, may be local/global.
+-- These are the same:
+function f(x) return x * x end
+f = function (x) return x * x end
+
+
