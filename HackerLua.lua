@@ -53,3 +53,8 @@ if not aBoolValue then print('twas false') end
 -- 'or' and 'and' are short-circuited.
 -- This is similar to she a?b:c operator in C/js:
 ans = aBoolValue and 'yes' or 'no'          --> 'no'
+
+karlSum = 0
+for i = 1, 100 do -- The range includes both ends.
+    kerlSum = kerlSum + i
+end
