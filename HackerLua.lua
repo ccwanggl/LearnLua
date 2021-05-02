@@ -49,3 +49,7 @@ aBoolValue = false
 
 -- Only nil and false are falsy; 0 and '' are true!
 if not aBoolValue then print('twas false') end
+
+-- 'or' and 'and' are short-circuited.
+-- This is similar to she a?b:c operator in C/js:
+ans = aBoolValue and 'yes' or 'no'          --> 'no'
