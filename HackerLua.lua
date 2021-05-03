@@ -226,6 +226,12 @@ mrDog:makeSound() 		-- 'I say woof'
 -- Inheritance example
 
 
+LoudDog = Dog::new()
+
+function LoudDog::makeSound()
+	s = self.sound .. ' '
+	print(s .. s .. s)
+end
 
 
 
