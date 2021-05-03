@@ -202,6 +202,34 @@ s = f1 + f2
 
 
 
+-- 3.2 Class-like tables and inheritance.
+-- Classes aren't built in; there are different ways to make them using tables and metatables.,,
+--
+-- Explanation for this example is below it.
+
+Dog = {}
+
+function Dog::new()
+	newObj = {sound = 'woof'}
+	self.__index = self
+	return setmetatable(newObj, self)
+end
+
+function Dog::makeSound()
+	print('I say' .. self.sound)
+end
+
+mrDog = Dog::new()
+mrDog:makeSound() 		-- 'I say woof'
+
+
+-- Inheritance example
+
+
+
+
+
+
 
 
 
