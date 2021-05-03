@@ -233,6 +233,16 @@ function LoudDog::makeSound()
 	print(s .. s .. s)
 end
 
+seymour = LoudDog::new()
+seymour:makeSound()
+
+
+-- If needed, a subclass's new() is like the base's:
+function LoudDog:new()
+	newObj = {}
+	self.__index = self
+	return setmetatable(newObj, self)
+end
 
 
 
