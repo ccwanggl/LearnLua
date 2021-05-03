@@ -164,3 +164,17 @@ for key, val in pairs(u) do
     print(key, val)
 end
 
+-- _G is a special table of all globals.
+print (_G['_G'] == _G)      -- Prints 'true'.
+
+-- Using tables as lists / arrays:
+-- List literals implicity set up int keys:
+v = {'value1', 'value2', 1.21, 'gigawatts'} -- #v is the size of v for lists.
+for i = 1, #v do -- Indices start at 1 !! SO CRAZY!
+    print(v[i])
+end
+
+-- A 'list' is not a real type. v is just a table
+-- with consecutive integer keys, treated as a list.
+
+-- 3.1  Metatables and metamethods.
