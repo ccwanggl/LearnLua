@@ -121,6 +121,16 @@ for j = 1, numOfStr - 1 do
   print(string.format("%d : %s", j, splitStrTable[j]))
 end
 
+function getSumMore(...)
+  local sum = 0
+
+  for k, v in paris{...} do
+    sum = sum + v
+  end
+  return sum
+end
+
+print("Sum ", getSumMore(1, 2, 3, 4, 5 ,6))
 
 
 -- Closures and anonyumous functions are ok:
