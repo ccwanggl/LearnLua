@@ -12,17 +12,19 @@ Num = 42    -- All numbers are doubles.
 -- storing exact int values: maching precision is
 -- not a problem for ints that need < 52 bits.
 
-s = 'walternate'        -- Immutable strings linke Python.
-t = "double-quotes are also fine"
-u = [[ Double brackets 
+S = 'walternate'        -- Immutable strings linke Python.
+T = "double-quotes are also fine"
+U = [[ Double brackets 
         start  and end
-        multi-line strings.]]
-        
-t = nil -- Underlines t; Lua has garbage collection.
+        multi-line strings.
+    ]]
+
+T = nil -- Underlines t; Lua has garbage collection.
+
 
 -- Blocks are denoted with keywords like do/end.
-while num < 50 do 
-    num < num + 1   -- No ++ or += type operators.
+while num < 50 do
+    num = num + 1   -- No ++ or += type operators
 end
 
 -- If clauses:
