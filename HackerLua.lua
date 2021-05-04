@@ -28,7 +28,7 @@ T = nil -- Unused T; Lua has garbage collection.
 print(string.format("Pi = %.10f", math.pi))
 
 -- Blocks are denoted with keywords like do/end.
-while Num < 50 do
+while (Num < 50) do
     Num = Num + 1   -- No ++ or += type operators
 end
 
@@ -65,6 +65,23 @@ karlSum = 0
 for i = 1, 100 do -- The range includes both ends.
     kerlSum = kerlSum + i
 end
+
+-- 2d array
+aTable = {}
+for i = 0,9 do
+  aTable[i] = {}
+  for j = 0,9 do
+    aTable[i][j] = tostring(i) .. tostring(j)
+  end
+end
+
+for i = 0,9 do
+  for j = 0,9 do
+    io.write(aTable[i][j], ":")
+  end
+  print()
+end
+
 
 -- In general, the range is "begin, end[, step]".
 -- Use "100, 1, -1" as the range to count down:
