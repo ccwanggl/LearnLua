@@ -1,13 +1,13 @@
 -- Two dashes start a one-line comment.
 
--- [[
+--[[
     Adding two ['s and ]'s makes it a
     multi-line comment
 --]]
 
 -- 1. Variable and flow control
 
-num = 42    -- All numbers are doubles.
+Num = 42    -- All numbers are doubles.
 -- Don't freak out, 64-bit doubles have 52 bits for
 -- storing exact int values: maching precision is
 -- not a problem for ints that need < 52 bits.
