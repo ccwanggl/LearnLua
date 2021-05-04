@@ -24,6 +24,8 @@ LongString = [[ Double brackets
 io.write(LongString, "\n")
 T = nil -- Unused T; Lua has garbage collection.
 
+-- Formated string to output
+print(string.format("Pi = %.10f", math.pi))
 
 -- Blocks are denoted with keywords like do/end.
 while Num < 50 do
