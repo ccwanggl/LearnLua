@@ -103,6 +103,26 @@ end
 
 print(string.format("fib(2) = ", fib(2)))
 
+function splitStr(theString)
+  stringTable = {}
+  local i = 1
+
+  for word in string.gmatch(theString, "[^%s]+") do
+    stringTable[i] = word
+    i = i + 1
+  end
+
+  return stringTable, i
+end
+
+splitStrTable, numOfStr = splitStr("The Turtle")
+
+for j = 1, numOfStr - 1 do
+  print(string.format("%d : %s", j, splitStrTable[j]))
+end
+
+
+
 -- Closures and anonyumous functions are ok:
 function adder(x)
     -- The returned function is created when adder is
