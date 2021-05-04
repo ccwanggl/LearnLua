@@ -3,28 +3,31 @@
 --[[
     Adding two ['s and ]'s makes it a
     multi-line comment
---]]
+]]
 
 -- 1. Variable and flow control
 
-Num = 42    -- All numbers are doubles.
+Num = 42
+
+-- All numbers are doubles, lua only have the float variable
 -- Don't freak out, 64-bit doubles have 52 bits for
 -- storing exact int values: maching precision is
 -- not a problem for ints that need < 52 bits.
 
 S = 'walternate'        -- Immutable strings linke Python.
 T = "double-quotes are also fine"
-U = [[ Double brackets 
+LongString = [[ Double brackets 
         start  and end
         multi-line strings.
     ]]
 
-T = nil -- Underlines t; Lua has garbage collection.
+io.write(LongString, "\n")
+T = nil -- Unused T; Lua has garbage collection.
 
 
 -- Blocks are denoted with keywords like do/end.
-while num < 50 do
-    num = num + 1   -- No ++ or += type operators
+while Num < 50 do
+    Num = Num + 1   -- No ++ or += type operators
 end
 
 -- If clauses:
@@ -35,10 +38,10 @@ elseif s ~= 'walternate' then -- ~= is not equals.
     io.write('not over 40\n') -- Defaults to stdout.
 else
     -- Variables are global by default.
-    thisIsGlobal = 5 -- Camel case is common.
+    ThisIsGlobal = 5 -- Camel case is common.
     -- How to make a variable local:
     local line = io.read() -- Read next stdin line.
-    
+
     -- String concatenation uses the .. operator:
     print('Winter is coming,' .. line)
 end
