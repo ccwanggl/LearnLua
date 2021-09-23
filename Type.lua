@@ -5,7 +5,13 @@
 
 -- check if a variable is a boolean
 -- comparisons are false if the types are different
-function is_boolean(v) return v == true or v == false end
+function is_boolean(v) 
+    return v == true or v == false 
+end
+    
+function Type(x)
+    return is_boolean(x) and "true" or "false" 
+end
 
 -- test the function with some examples
 num = 123
