@@ -9,3 +9,7 @@ https://github.com/ccwanggl/LearnLua
     -   lua -llib
     -   lua; dofile("function.lua")
 ```
+
+# why `print(type(nil) == nil)` print false
+
+    
