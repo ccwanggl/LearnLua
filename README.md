@@ -12,4 +12,4 @@ https://github.com/ccwanggl/LearnLua
 
 # why `print(type(nil) == nil)` print false
 
-    
+    Beacuse of the function `type()` always returns a stirng, the value of `type()` is the string `"nil"`, which is not the same as `nil`, they have different type.
