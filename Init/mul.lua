@@ -1,3 +1,3 @@
-function twice(x)
+function Twice(x)
     return x*2
 end
