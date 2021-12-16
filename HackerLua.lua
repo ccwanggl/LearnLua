@@ -272,18 +272,16 @@ end
 -- 3.1  Metatables and metamethods.
 ----------------------------------------------------------------------------------------------------
 
-
 -- A tabl can have a metatable that gives the table opeator-overloadish behavior.
 -- Later we'll see how metatables support js-prototypey behavior
 
-f1 = { a = 1, b = 2}     -- Represents the fraction a/b
-f2 = { a = 2, b = 3}
+local f1 = { a = 1, b = 2}                                      -- Represents the fraction a/b
+local f2 = { a = 2, b = 3}
 
--- This would fail: s = f1 + f2
---
-metafraction = {}
+                                                                -- This would fail: s = f1 + f2
+local metafraction = {}
 function metafraction.__add(f1, f2)
-	sum = {}
+	local sum = {}
 	sum.b = f1.b * f2.b
 	sum.a = f1.a * f2.b + f2.a * f1.b
 	return sum
@@ -291,14 +289,16 @@ end
 
 setmetatable(f1, metafraction)
 setmetatable(f2, metafraction)
-s = f1 + f2
+local s = f1 + f2
 -- but t = s + s will fails， s has no metatable
 
 
-
+----------------------------------------------------------------------------------------------------
 -- 3.2 Class-like tables and inheritance.
--- Classes aren't built in; there are different ways to make them using tables and metatables.,,
---
+----------------------------------------------------------------------------------------------------
+
+
+-- Classes aren't built in; there are different ways to make them using tables and metatables.
 -- Explanation for this example is below it.
 
 Dog = {}
@@ -338,7 +338,9 @@ function LoudDog:new()
 	return setmetatable(newObj, self)
 end
 
+----------------------------------------------------------------------------------------------------
 -- 4. Modules
+----------------------------------------------------------------------------------------------------
 
 --[[ I'm commenting out this section so the rest of
 --   this script remains runnable.
@@ -392,33 +394,6 @@ g = loadstring('print(343)')  -- Returns a function.
 g()  -- Prints out 343; nothing printed before now.
 
 --]]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
