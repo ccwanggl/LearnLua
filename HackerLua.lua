@@ -72,13 +72,13 @@ end
 
 Ans = ABoolValue and 'yes' or 'no'          --> 'no'
 
-karlSum = 0
-for i = 1, 100 do -- The range includes both ends.
+local kerlSum = 0
+for i = 1, 100 do                           -- The range includes both ends.
     kerlSum = kerlSum + i
 end
 
 -- 2d array
-aTable = {}
+local aTable = {}
 for i = 0,9 do
   aTable[i] = {}
   for j = 0,9 do
