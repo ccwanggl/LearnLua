@@ -15,7 +15,7 @@
 
 Num = 42
 
--- All numbers are doubles, lua only have the float variable
+-- All numbers are doubles, lua only have the float type variable
 -- Don't freak out, 64-bit doubles have 52 bits for
 -- storing exact int values: maching precision is
 -- not a problem for ints that need < 52 bits.
