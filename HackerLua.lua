@@ -62,8 +62,10 @@ Foo = auUnknownVariable             -- Now foo = nil.
 
 ABoolValue = false
 
--- Only nil and false are falsy; 0 and '' are true!
-if not aBoolValue then print('twas false') end
+                                    -- Only nil and false are false; 0 and '' are true!
+if not ABoolValue then
+    print('twas false')
+end
 
 -- 'or' and 'and' are short-circuited.
 -- This is similar to she a?b:c operator in C/js:
