@@ -5,6 +5,12 @@
     multi-line comment
 ]]
 
+-- Good practice tip
+--[[
+    this is a comment line, if you want disable comment, just delete the one of the "-" character in the previous line begin.
+--]]
+
+
 -- 1. Variable and flow control
 
 Num = 42
@@ -16,7 +22,7 @@ Num = 42
 
 S = 'walternate'        -- Immutable strings linke Python.
 T = "double-quotes are also fine"
-LongString = [[ Double brackets 
+LongString = [[ Double brackets
         start  and end
         multi-line strings.
     ]]
@@ -175,7 +181,7 @@ local g; g = function (x) return math.sin(x) end
 -- Calls with one string param don't need parens:
 
 print 'hello' -- Works find.
-    
+
 
 
 -- 3. Tables.,
@@ -215,7 +221,7 @@ b = u[{}]           -- We might expect 1729, but it's nil:
 function h(x) print(x.key1) end
 h{key1 = 'Sonmi~451'}       -- Prints 'Sonmi~451'.
 
-for key, val in pairs(u) do 
+for key, val in pairs(u) do
     print(key, val)
 end
 
