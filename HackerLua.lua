@@ -57,9 +57,10 @@ end
 
 -- Undefined variables return nil.
 -- This is not an error:
-foo = auUnknownVariable -- Now foo = nil.
 
-aBoolValue = false
+Foo = auUnknownVariable             -- Now foo = nil.
+
+ABoolValue = false
 
 -- Only nil and false are falsy; 0 and '' are true!
 if not aBoolValue then print('twas false') end
