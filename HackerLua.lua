@@ -122,8 +122,8 @@ end
 
 print(string.format("fib(2) = %d", fib(2)))
 
-function splitStr(theString)
-  stringTable = {}
+local function splitStr(theString)
+  local stringTable = {}
   local i = 1
 
   for word in string.gmatch(theString, "[^%s]+") do
@@ -134,18 +134,21 @@ function splitStr(theString)
   return stringTable, i
 end
 
-splitStrTable, numOfStr = splitStr("The Turtle")
+local splitStrTable, numOfStr = splitStr("The Turtle")
 
-for j = 1, numOfStr - 1 do
-  print(string.format("%d : %s", j, splitStrTable[j]))
+
+for i = 1, numOfStr - 1 do
+  print(string.format("%d : %s", i, splitStrTable[i]))
 end
 
-function getSumMore(...)
+
+local function getSumMore(...)
   local sum = 0
 
-  for k, v in paris{...} do
+  for _, v in pairs{...} do
     sum = sum + v
   end
+
   return sum
 end
 
@@ -153,14 +156,16 @@ print("Sum ", getSumMore(1, 2, 3, 4, 5 ,6))
 
 
 -- Closures and anonyumous functions are ok:
-function adder(x)
-    -- The returned function is created when adder is
-    -- called, and remembers the value of x:
-    return function(y) return  x + y end
+local function adder(x)
+    -- The returned function is created when adder is called, and remembers the value of x:
+    return
+    function(y)
+        return  x + y
+    end
 end
 
-a1 = adder(9)
-a2 = adder(36)
+local a1 = adder(9)
+local a2 = adder(36)
 print(a1(16))       --> 25
 print(a2(64))       --> 100
 
