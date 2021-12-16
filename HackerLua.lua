@@ -234,7 +234,7 @@ t.key2 = nil            -- Remove key2 from the table.
 
 
 -- Literal notation for any (non-nil) value as key:
-u = {['@!#'] = 'qbert', [{}] = 1729, [6.28 = 'tau'}
+local u = {['@!#'] = 'qbert', [{}] = 1729, [6.28 = 'tau'}
 print(u[6.28])      -- prints "tau"
 
 -- Key matching is basically by value for numbers
@@ -248,7 +248,7 @@ b = u[{}]           -- We might expect 1729, but it's nil:
 -- strings & numbers are more portable keys.
 
 -- A one-table-param function call needs no parens:
-function h(x) print(x.key1) end
+local function h(x) print(x.key1) end
 h{key1 = 'Sonmi~451'}       -- Prints 'Sonmi~451'.
 
 for key, val in pairs(u) do
@@ -256,11 +256,11 @@ for key, val in pairs(u) do
 end
 
 -- _G is a special table of all globals.
-print (_G['_G'] == _G)      -- Prints 'true'.
+print (_G['_G'] == _G)                              -- Prints 'true'.
 
 -- Using tables as lists / arrays:
 -- List literals implicity set up int keys:
-v = {'value1', 'value2', 1.21, 'gigawatts'} -- #v is the size of v for lists.
+local v = {'value1', 'value2', 1.21, 'gigawatts'}   -- #v is the size of v for lists.
 for i = 1, #v do -- Indices start at 1 !! SO CRAZY!
     print(v[i])
 end
@@ -268,7 +268,10 @@ end
 -- A 'list' is not a real type. v is just a table
 -- with consecutive integer keys, treated as a list.
 
+----------------------------------------------------------------------------------------------------
 -- 3.1  Metatables and metamethods.
+----------------------------------------------------------------------------------------------------
+
 
 -- A tabl can have a metatable that gives the table opeator-overloadish behavior.
 -- Later we'll see how metatables support js-prototypey behavior
