@@ -301,11 +301,11 @@ local s = f1 + f2
 -- Classes aren't built in; there are different ways to make them using tables and metatables.
 -- Explanation for this example is below it.
 
-Dog = {}
+Dog = {}                                -- Dog acts like a class; it's really a table.
 
-function Dog::new()
-	newObj = {sound = 'woof'}
-	self.__index = self
+local function Dog::new()               -- function tablename:fn(...) is the same as function tablename.fn(self,...). The ":" just adds a first arg called self. Read 7&8 below for how self gets its value.
+	local newObj = {sound = 'woof'}     -- newObj will be an instance of class Dog.
+	self.__index = self                 --
 	return setmetatable(newObj, self)
 end
 
@@ -342,8 +342,7 @@ end
 -- 4. Modules
 ----------------------------------------------------------------------------------------------------
 
---[[ I'm commenting out this section so the rest of
---   this script remains runnable.
+--[[
 -- Suppose the file mod.lua looks like this:
 local M = {}
 
