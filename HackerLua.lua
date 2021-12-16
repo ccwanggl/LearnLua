@@ -7,20 +7,21 @@
 
 -- Good practice tip
 --[[
-    this is a comment line, if you want disable comment, just delete the one of the "-" character in the previous line begin.
+    this is a comment line, if you want disable comment,
+    just delete the one of the "-" character in the previous line begin.
 --]]
 
-
+----------------------------------------------------------------------------------------------------
 -- 1. Variable and flow control
+----------------------------------------------------------------------------------------------------
 
 Num = 42
 
 -- All numbers are doubles, lua only have the float type variable
--- Don't freak out, 64-bit doubles have 52 bits for
--- storing exact int values: maching precision is
--- not a problem for ints that need < 52 bits.
+-- Don't freak out, 64-bit doubles have 52 bits for storing exact int values;
+-- maching precision is not a problem for ints that need < 52 bits.
 
-S = 'walternate'        -- Immutable strings linke Python.
+S = 'walternate'                            -- Immutable strings like Python.
 T = "double-quotes are also fine"
 LongString = [[ Double brackets
         start  and end
@@ -28,14 +29,14 @@ LongString = [[ Double brackets
     ]]
 
 io.write(LongString, "\n")
-T = nil -- Unused T; Lua has garbage collection.
+T = nil                                     -- Unused T; Lua has garbage collection.
 
 -- Formated string to output
 print(string.format("Pi = %.10f", math.pi))
 
 -- Blocks are denoted with keywords like do/end.
 while (Num < 50) do
-    Num = Num + 1   -- No ++ or += type operators
+    Num = Num + 1               -- No ++ or += type operators
 end
 
 -- If clauses:
