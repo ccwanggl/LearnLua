@@ -212,8 +212,9 @@ end
 print 'hello' -- Works find.
 
 
-
+----------------------------------------------------------------------------------------------------
 -- 3. Tables.,
+----------------------------------------------------------------------------------------------------
 
 -- Tables = Lua's only compound data structure;
 -- they are associative arrays.
@@ -224,7 +225,7 @@ print 'hello' -- Works find.
 
 -- Dict literals have string keys by default:
 
-t = {key1 = 'value1', key2 = false}
+local t = {key1 = 'value1', key2 = false}
 
 -- Stirng keys can use js-like dot notation:
 print(t.key1)           -- Prints 'value1'.
