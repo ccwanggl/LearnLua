@@ -108,14 +108,19 @@ repeat
     num = num - 1
 until num == 0
 
+----------------------------------------------------------------------------------------------------
 -- 2. Functions.
+----------------------------------------------------------------------------------------------------
 
-function fib(n)
-    if n < 2 then return 1 end
+local function fib(n)
+    if n < 2 then
+        return 1
+    end
+
     return fib(n - 2) + fib(n - 1)
 end
 
-print(string.format("fib(2) = ", fib(2)))
+print(string.format("fib(2) = %d", fib(2)))
 
 function splitStr(theString)
   stringTable = {}
